@@ -27,20 +27,6 @@ public class EmailController {
     @CrossOrigin()
     @PostMapping("/taxCheckForm")
     public void sendTaxCheckFormEmail(@RequestBody TaxRefundCheckForm taxRefundCheckForm) throws MessagingException {
-        emailService.sendTaxCheckFormEmail(
-                taxRefundCheckForm.getSalary(),
-                taxRefundCheckForm.getPartnerSalary(),
-                taxRefundCheckForm.getCashWithdrawal(),
-                taxRefundCheckForm.getJobChange(),
-                taxRefundCheckForm.getBabyBirth(),
-                taxRefundCheckForm.getCapitalMarketLose(),
-                taxRefundCheckForm.getUnemployed(),
-                taxRefundCheckForm.getDivorceAndPayFoods(),
-                taxRefundCheckForm.getTaxPaid(),
-                taxRefundCheckForm.getFullName(),
-                taxRefundCheckForm.getPhoneNumber(),
-                taxRefundCheckForm.getEmail(),
-                taxRefundCheckForm.isAgreeToContact()
-        );
+        emailService.sendTaxCheckFormEmail(taxRefundCheckForm);
     }
 }

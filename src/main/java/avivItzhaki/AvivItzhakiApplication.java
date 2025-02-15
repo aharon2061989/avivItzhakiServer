@@ -9,5 +9,4 @@ public class AvivItzhakiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AvivItzhakiApplication.class, args);
 	}
-
 }
